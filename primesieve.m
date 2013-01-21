@@ -1,13 +1,13 @@
-function [primes] = primesieve(n) 
-    upperlimit=floor(sqrt (n));
-    primes=logical(1:n);
-    primes(1)=false;
-    for i=2:upperlimit
-        if primes(i)== true
+function [primes] = primesieve(n)
+upperlimit=floor(sqrt (n));
+primes=logical(1:n);
+primes(1)=false;
+for i=2:upperlimit
+    if primes(i)== true
         jj=0;
-        while true 
+        while true
             j=i*i + jj*i;
-            if j > n 
+            if j > n
                 break
             end;
             primes(j)=false;
